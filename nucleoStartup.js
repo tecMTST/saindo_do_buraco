@@ -30,13 +30,13 @@ function nucleoStartup() {
     ["a"]
   );
 
-  let overAlpha = 0;
+  let overAlpha = 255;
 
   gameManager.addState("intro", (manager) => {
     background(0);
-    while (!logoNucleo.sfx.isLoaded()) {}
-    // if (!logoNucleo.sfx.isPlaying() && frameCount < 30) logoNucleo.sfx.play();
-    if (frameCount > 50) manager.setCurrentState("menu");
+    //while (!logoNucleo.sfx.isLoaded()) {}
+    if (!logoNucleo.sfx.isPlaying() && frameCount < 30) logoNucleo.sfx.play();
+    if (frameCount > 100) manager.setCurrentState("menu");
     // fadeOut.apply(logoNucleo);
     logoNucleo.setPosition({ x: width / 2, y: height / 2 });
     logoNucleo.draw();
@@ -47,7 +47,7 @@ function nucleoStartup() {
     text("FRENTE DE GAMES", width / 2, (3 * height) / 4);
     pop();
     background(0, overAlpha);
-    overAlpha += 5;
+    overAlpha += -5;
   });
   gameManager.setCurrentState("intro");
 }
