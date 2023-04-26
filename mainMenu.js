@@ -22,20 +22,12 @@ function setupMainMenu() {
     fill(255);
     textSize(UNIT_SIZE * 0.4);
     text(
-      "Parabéns por ter realizado mais uma entrega!",
+      "Parabéns por ter realizado mais uma entrega!\nInfelizmente essa cidade não deixa o motoca nem descansar...\nBora pra próxima",
       0,
       height / 2 - UNIT_SIZE * 3,
       width,
       UNIT_SIZE * 4
     );
-    text(
-      "Infelizmente essa cidade não deixa o motoca nem descansar...",
-      0,
-      height / 2 - UNIT_SIZE * 2,
-      width,
-      UNIT_SIZE * 4
-    );
-    text("Bora pra próxima", width / 2, height / 2 + UNIT_SIZE * 0.8);
     textSize(UNIT_SIZE / 3);
     text(
       "toque/clique para começar novamente!",
