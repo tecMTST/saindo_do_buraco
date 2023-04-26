@@ -44,7 +44,7 @@ function nucleoStartup() {
     textAlign(CENTER, CENTER);
     textSize(20);
     fill(255);
-    text("Frente de Games", width / 2, (3 * height) / 4);
+    text("FRENTE DE GAMES", width / 2, (3 * height) / 4);
     pop();
     background(0, overAlpha);
     overAlpha += 5;

@@ -11,7 +11,7 @@ function setupMainMenu() {
     pop();
     if (mouseIsPressed) {
       manager.setCurrentState("instrucoes");
-      manager.addEvent("mostrando instrucoes", 300);
+      manager.addEvent("mostrando instrucoes", 400);
     }
   });
 
@@ -58,14 +58,14 @@ function setupMainMenu() {
     text(
       "Experimente o cotidiano de um entregador em sua moto tendo que fugir dos buracos de São Paulo. Desvie de 50 buracos para chegar no endereço da sua próxima entrega.",
       0,
-      height / 2 - UNIT_SIZE * 2,
+      height / 2 - UNIT_SIZE * 4,
       width,
-      UNIT_SIZE * 4
+      UNIT_SIZE * 8
     );
     pop();
     if (
       (mouseIsPressed &&
-        manager.getEventDuration("mostrando instrucoes") < 250) ||
+        manager.getEventDuration("mostrando instrucoes") < 360) ||
       !manager.hasEvent("mostrando instrucoes")
     )
       manager.setCurrentState("game");
