@@ -12,25 +12,27 @@ async function preloadEntities() {
     yZero: 0,
   });
 
+  gameManager.SCROLL = UNIT_SIZE / 4;
+
   const road0 = new Road(
     "road0",
     roadTile,
     { width: 0, height: 0 },
-    UNIT_SIZE / 8
+    gameManager.SCROLL
   );
 
   const road1 = new Road(
     "road1",
     roadTile,
     { width: 0, height: 0 },
-    UNIT_SIZE / 8
+    gameManager.SCROLL
   );
 
   const road2 = new Road(
     "road2",
     roadTile,
     { width: 0, height: 0 },
-    UNIT_SIZE / 8
+    gameManager.SCROLL
   );
 
   gameManager.addEntity(road0, "road0");
