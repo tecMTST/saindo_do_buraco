@@ -12,7 +12,7 @@ function setup() {
   noSmooth();
   setupEntities();
   setupMainMenu();
-  frameRate(60);
+  frameRate(30);
   textFont(gameManager.font);
 }
 
