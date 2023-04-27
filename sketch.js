@@ -1,4 +1,4 @@
-let UNIT_SIZE = 110;
+let UNIT_SIZE = 95;
 const gameManager = new GameManager(UNIT_SIZE);
 setAssetsConfig(gameManager);
 
