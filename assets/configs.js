@@ -6,7 +6,7 @@ function setAssetsConfig(manager) {
       altura: 320,
     },
     buraco: {
-      local: "./assets/buracos2.png",
+      local: "./assets/buracos.png",
       largura: 96,
       altura: 96,
     },
