@@ -1,4 +1,21 @@
 function setupMainMenu() {
+  gameManager.tutorialImage = loadImage("./assets/tutorial_image.png");
+  const floatAnimation = Animate.getAnimation(
+    Animate.move,
+    {
+      func: Animate.sine,
+      funcArgs: {
+        a: 5,
+        b: 0.1,
+        c: 0,
+        d: 0,
+      },
+    },
+    ["y"]
+  );
+  const dif = {
+    position: { y: 0 },
+  };
   gameManager.addState("menu", (manager) => {
     background(254, 0, 0);
     push();
@@ -50,10 +67,22 @@ function setupMainMenu() {
     text(
       "Experimente o cotidiano de um entregador em sua moto tendo que fugir dos buracos de São Paulo. Desvie de 50 buracos para chegar no endereço da sua próxima entrega.",
       0,
-      height / 2 - UNIT_SIZE * 4,
+      height / 2 - UNIT_SIZE * 6,
       width,
       UNIT_SIZE * 8
     );
+
+    imageMode(CENTER);
+
+    floatAnimation.apply(dif);
+    image(
+      gameManager.tutorialImage,
+      width / 2,
+      height * 0.7 + dif.position.y,
+      UNIT_SIZE * 2,
+      UNIT_SIZE * 2
+    );
+
     pop();
     if (
       (mouseIsPressed &&
