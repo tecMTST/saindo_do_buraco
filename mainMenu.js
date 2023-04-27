@@ -21,9 +21,15 @@ function setupMainMenu() {
     push();
     textAlign(CENTER, CENTER);
     fill(255);
-    textSize(UNIT_SIZE * 0.7);
-    text("SAINDO DO BURACO", width / 2, height / 2 - UNIT_SIZE * 0.7);
-    textSize(UNIT_SIZE / 3);
+    textSize(UNIT_SIZE * 0.4);
+    text(
+      "SAINDO DO BURACO",
+      0,
+      height / 2 - UNIT_SIZE * 0.7,
+      width,
+      UNIT_SIZE * 1
+    );
+    textSize(UNIT_SIZE / 4);
     text("toque/clique para jogar!", width / 2, height / 2 + UNIT_SIZE * 2);
     pop();
     if (mouseIsPressed) {
@@ -37,7 +43,7 @@ function setupMainMenu() {
     push();
     textAlign(CENTER, CENTER);
     fill(255);
-    textSize(UNIT_SIZE * 0.4);
+    textSize(UNIT_SIZE * 0.3);
     text(
       "Parabéns por ter realizado mais uma entrega!\nInfelizmente essa cidade não deixa o motoca nem descansar...\nBora pra próxima",
       0,
@@ -45,7 +51,7 @@ function setupMainMenu() {
       width,
       UNIT_SIZE * 4
     );
-    textSize(UNIT_SIZE / 3);
+    textSize(UNIT_SIZE / 5);
     text(
       "toque/clique para começar novamente!",
       width / 2,
@@ -63,7 +69,7 @@ function setupMainMenu() {
     push();
     textAlign(CENTER, CENTER);
     fill(255);
-    textSize(UNIT_SIZE * 0.5);
+    textSize(UNIT_SIZE * 0.3);
     text(
       "Experimente o cotidiano de um entregador em sua moto tendo que fugir dos buracos de São Paulo. Desvie de 50 buracos para chegar no endereço da sua próxima entrega.",
       0,
@@ -97,7 +103,7 @@ function setupMainMenu() {
     push();
     textAlign(CENTER, CENTER);
     fill(255);
-    textSize(UNIT_SIZE * 0.5);
+    textSize(UNIT_SIZE * 0.3);
     text(
       "Tu caiu no buraco, tal qual milhares de outros trabalhadores em São Paulo.",
       0,
@@ -114,7 +120,7 @@ function setupMainMenu() {
       UNIT_SIZE * 3
     );
 
-    textSize(UNIT_SIZE * 0.3);
+    textSize(UNIT_SIZE * 0.2);
     text(
       "toque/clique para tentar novamente",
       0,
