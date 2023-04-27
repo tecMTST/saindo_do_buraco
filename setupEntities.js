@@ -35,9 +35,9 @@ async function preloadEntities() {
     gameManager.SCROLL
   );
 
-  gameManager.addEntity(road0, "road0");
-  gameManager.addEntity(road1, "road1");
-  gameManager.addEntity(road2, "road2");
+  gameManager.addEntity(road0, "road0", 0);
+  gameManager.addEntity(road1, "road1", 0);
+  gameManager.addEntity(road2, "road2", 0);
   createHoles();
   gameManager.addEntity(car, "car", 2);
 
@@ -52,6 +52,7 @@ async function preloadEntities() {
 
 function createHoles() {
   Hole.generateHoles(gameManager);
+  Obstacle.generateObstacles(gameManager);
 }
 
 function setupEntities() {

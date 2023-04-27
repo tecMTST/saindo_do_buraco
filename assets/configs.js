@@ -25,5 +25,10 @@ function setAssetsConfig(manager) {
       largura: 640,
       altura: 640,
     },
+    objetos: {
+      local: "./assets/objetos.png",
+      largura: 32,
+      altura: 32,
+    },
   };
 }
