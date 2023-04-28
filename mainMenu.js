@@ -31,6 +31,16 @@ function setupMainMenu() {
     );
     textSize(UNIT_SIZE / 4);
     text("toque/clique para jogar!", width / 2, height / 2 + UNIT_SIZE * 2);
+    imageMode(CENTER, CENTER);
+    noStroke();
+    background("#e00000");
+    image(
+      gameManager.menuImage,
+      width / 2,
+      height / 2,
+      width,
+      (width * gameManager.menuImage.height) / gameManager.menuImage.width
+    );
     pop();
     if (mouseIsPressed) {
       manager.setCurrentState("instrucoes");
@@ -56,6 +66,16 @@ function setupMainMenu() {
       "toque/clique para começar novamente!",
       width / 2,
       height / 2 + UNIT_SIZE * 2
+    );
+    imageMode(CENTER, CENTER);
+    noStroke();
+    background("#e00000");
+    image(
+      gameManager.winImage,
+      width / 2,
+      height / 2,
+      width,
+      (width * gameManager.winImage.height) / gameManager.winImage.width
     );
     pop();
     if (mouseIsPressed && !manager.hasEvent("won game")) {
@@ -89,6 +109,16 @@ function setupMainMenu() {
       UNIT_SIZE * 2
     );
 
+    imageMode(CENTER, CENTER);
+    noStroke();
+    background("#e00000");
+    image(
+      gameManager.instrucoes,
+      width / 2,
+      height / 2,
+      width,
+      (width * gameManager.instrucoes.height) / gameManager.instrucoes.width
+    );
     pop();
     if (
       (mouseIsPressed &&
@@ -99,7 +129,8 @@ function setupMainMenu() {
   });
 
   gameManager.addState("lose", (manager) => {
-    background(0);
+    noStroke();
+    background("#e00000");
     push();
     textAlign(CENTER, CENTER);
     fill(255);
@@ -127,6 +158,17 @@ function setupMainMenu() {
       height / 2 + UNIT_SIZE * 3,
       width,
       UNIT_SIZE
+    );
+
+    imageMode(CENTER, CENTER);
+    noStroke();
+    background("#e00000");
+    image(
+      gameManager.loseImage,
+      width / 2,
+      height / 2,
+      width,
+      (width * gameManager.loseImage.height) / gameManager.loseImage.width
     );
 
     pop();

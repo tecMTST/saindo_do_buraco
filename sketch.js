@@ -23,6 +23,10 @@ function preload() {
   nucleoStartup();
   gameManager.preload();
   gameManager.font = loadFont("./assets/VT323-Regular.ttf");
+  gameManager.menuImage = loadImage("./assets/mockups telas-01.png");
+  gameManager.instrucoes = loadImage("./assets/mockups telas-02.png");
+  gameManager.winImage = loadImage("./assets/mockups telas-03.png");
+  gameManager.loseImage = loadImage("./assets/mockups telas-04.png");
 }
 
 function draw() {
