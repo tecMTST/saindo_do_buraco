@@ -162,7 +162,7 @@ function setupMainMenu() {
 
     imageMode(CENTER, CENTER);
     noStroke();
-    background("#e00000");
+    background(0);
     image(
       gameManager.loseImage,
       width / 2,
