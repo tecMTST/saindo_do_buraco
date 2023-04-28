@@ -39,8 +39,8 @@ function nucleoStartup() {
     if (mouseIsPressed) hasTouched = true;
     // fadeOut.apply(logoNucleo);
     logoNucleo.setPosition({ x: width / 2, y: height / 2 });
-    if (!hasTouched) return;
-    if (!logoNucleo.sfx.isPlaying()) logoNucleo.sfx.play();
+    // if (!hasTouched) return;
+    // if (!logoNucleo.sfx.isPlaying()) logoNucleo.sfx.play();
     if (fc++ > 100) manager.setCurrentState("menu");
     logoNucleo.draw();
     push();
