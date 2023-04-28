@@ -1,4 +1,6 @@
-let UNIT_SIZE = 95;
+let UNIT_SIZE = window.innerWidth / 6;
+if (window.innerHeight < window.innerWidth)
+  UNIT_SIZE = (2 * window.innerHeight) / (3 * 6);
 const gameManager = new GameManager(UNIT_SIZE);
 setAssetsConfig(gameManager);
 

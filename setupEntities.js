@@ -12,7 +12,7 @@ async function preloadEntities() {
     yZero: 0,
   });
 
-  gameManager.SCROLL = UNIT_SIZE / 4;
+  gameManager.SCROLL = UNIT_SIZE / 5;
 
   const road0 = new Road(
     "road0",

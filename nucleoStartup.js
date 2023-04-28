@@ -31,14 +31,17 @@ function nucleoStartup() {
   );
 
   let overAlpha = 255;
+  let hasTouched = false;
+  let fc = 0;
 
   gameManager.addState("intro", (manager) => {
     background(0);
-    //while (!logoNucleo.sfx.isLoaded()) {}
-    if (!logoNucleo.sfx.isPlaying() && frameCount < 30) logoNucleo.sfx.play();
-    if (frameCount > 100) manager.setCurrentState("menu");
+    if (mouseIsPressed) hasTouched = true;
     // fadeOut.apply(logoNucleo);
     logoNucleo.setPosition({ x: width / 2, y: height / 2 });
+    // if (!hasTouched) return;
+    // if (!logoNucleo.sfx.isPlaying()) logoNucleo.sfx.play();
+    if (fc++ > 100) manager.setCurrentState("menu");
     logoNucleo.draw();
     push();
     textAlign(CENTER, CENTER);
